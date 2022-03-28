@@ -20,4 +20,39 @@ Save the Clean data to the file
 
 
 # CODE
-# OUPUT
+~~~
+import pandas as pd
+df = pd.read_csv("Data_set.csv")
+df.head(10)
+df.tail()
+df.info()
+df.isnull().sum()
+df['show_name']=df['show_name'].fillna(df['show_name'].mode()[0])
+df.head(10)
+df['show_name']=df['show_name'].fillna(df['show_name'].mode()[0])
+df.head()
+df['rating']=df['rating'].fillna(df['rating'].mean())
+df.info()
+df['aired_on']=df['aired_on'].fillna(df['aired_on'].mode()[0])
+df.info()
+df['original_network']=df['original_network'].fillna(df['original_network'].mode()[0])
+df.info()
+[df['current_overall_rank']=df['current_overall_rank'].fillna(df['current_overall_rank'].mode()[0])
+df.info()
+df['watchers']=df['watchers'].fillna(df['watchers'].mode()[0])
+df.head()
+df.info()
+df.isnull().sum()
+~~~
+# OUTPUT
+![output](.//j1.PNG)
+![output](.//j2.PNG)
+![output](.//j4.PNG)
+![output](.//j5.PNG)
+![output](.//j6.PNG)
+![output](.//j7.PNG)
+
+# RESULT
+The given data has been read and data cleaning has been performed and saved the cleaned data to a file.
+
+
